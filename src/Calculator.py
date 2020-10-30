@@ -35,6 +35,15 @@ def square_val(a):
     return c
 
 
+def squareRoot_val(a, b):
+    a = int(a)
+    c = a ** (1 / 2)
+    decimals = int(b[::-1].find('.'))
+    if decimals == -1:
+        return c
+    return round(c, decimals)
+
+
 class Calculator:
     result = 0
 
@@ -59,4 +68,8 @@ class Calculator:
 
     def square(self, a):
         self.result = square_val(a)
+        return self.result
+
+    def squareRoot(self, a, b):
+        self.result = squareRoot_val(a, b)
         return self.result

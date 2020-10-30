@@ -14,17 +14,26 @@ def subtraction(a, b):
     c = b - a
     return c
 
+
 def multiplication(a, b):
     a = int(a)
     b = int(b)
     c = a * b
     return c
 
+
 def division(a, b):
     a = float(a)
     b = float(b)
     c = b / a
     return round(c, 9)
+
+
+def square_val(a):
+    a = int(a)
+    c = a ** 2
+    return c
+
 
 class Calculator:
     result = 0
@@ -46,4 +55,8 @@ class Calculator:
 
     def divide(self, a, b):
         self.result = division(a, b)
+        return self.result
+
+    def square(self, a):
+        self.result = square_val(a)
         return self.result
